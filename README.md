@@ -48,8 +48,12 @@ After running the setup script, you can start your space adventure from anywhere
 
 - On Windows:
   ```
-  run
-```
+  run_asteroids.bat
+  ```
+- On macOS and Linux:
+  ```
+  asteroids
+  ```
 
 You may need to restart your terminal or command prompt for the changes to take effect.
 
@@ -72,3 +76,16 @@ To update the game to the latest version:
    - On macOS and Linux: `./setup.sh`
 
 After updating, you may need to restart your terminal or command prompt for any changes to take effect.
+
+## 🔧 Troubleshooting
+
+If you encounter any issues running the game, try the following:
+
+1. Ensure you're using Python 3.10 or later.
+2. Make sure you've run the setup script as described in the Setup and Installation section.
+3. If you're on macOS or Linux and the `asteroids` command isn't found, try running:
+   ```
+   sudo ln -sf /path/to/your/asteroids_py/asteroids /usr/local/bin/asteroids
+   ```
+   Replace `/path/to/your/asteroids_py` with the actual path to your game directory.
+4. If you're still having issues, please open an issue on the GitHub repository with details about the error you're encountering.
