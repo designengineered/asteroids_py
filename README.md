@@ -48,12 +48,8 @@ After running the setup script, you can start your space adventure from anywhere
 
 - On Windows:
   ```
-  run_asteroids.bat
-  ```
-- On macOS and Linux:
-  ```
-  asteroids
-  ```
+  run
+```
 
 You may need to restart your terminal or command prompt for the changes to take effect.
 
