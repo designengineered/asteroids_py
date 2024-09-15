@@ -93,3 +93,17 @@ If you encounter any issues running the game, try the following:
    sudo chmod +x /usr/local/bin/asteroids
    ```
 5. If you're still having issues, please open an issue on the GitHub repository with details about the error you're encountering.
+
+## 🚀 Future Extensions
+
+- Implement power-ups and special abilities
+- Add different enemy types
+- Create a high-score system
+- Develop multiplayer functionality
+- Design additional levels with increasing difficulty
+- Implement setup scripts & global command ✅
+- Add sound effects and background music
+
+## 🔧 Implemented Features
+
+- **Setup Scripts & Global Command**: Implemented setup scripts for Windows (.bat) and macOS/Linux (.sh) to create a virtual environment, install required packages, and set up the game to run globally. Users can now start the game from anywhere using simple commands.
