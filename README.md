@@ -6,7 +6,7 @@ Project by Cello ([@laztaxon](https://github.com/laztaxon)) as part of an Object
 
 **Note: This is version 1.0 of the game. Visuals and mechanics may change in future updates.**
 
-![Asteroids Gameplay](insert_gif_url_here.gif)
+![Asteroids Gameplay](assets/trailer.gif)
 
 ## 🕹️ Controls
 
@@ -88,4 +88,8 @@ If you encounter any issues running the game, try the following:
    sudo ln -sf /path/to/your/asteroids_py/asteroids /usr/local/bin/asteroids
    ```
    Replace `/path/to/your/asteroids_py` with the actual path to your game directory.
-4. If you're still having issues, please open an issue on the GitHub repository with details about the error you're encountering.
+4. If you encounter permission issues, you may need to run:
+   ```
+   sudo chmod +x /usr/local/bin/asteroids
+   ```
+5. If you're still having issues, please open an issue on the GitHub repository with details about the error you're encountering.

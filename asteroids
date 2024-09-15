@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+SCRIPT_DIR="/Users/cello_r/Documents/python/boot_dev/asteroids"
 cd "$SCRIPT_DIR"
-source venv/bin/activate
-python main.py
+source "$SCRIPT_DIR/venv/bin/activate"
+python "$SCRIPT_DIR/main.py"
