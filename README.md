@@ -97,24 +97,26 @@ If you encounter any issues running the game, try the following:
 ## 🚀 Future Extensions
 
 - [x] Implement setup scripts & global command
-- [ ] Implement power-ups and special abilities
-- [ ] Add different enemy types
-- [ ] Create a high-score system
-- [ ] Develop multiplayer functionality
-- [ ] Design additional levels with increasing difficulty
-- [ ] Add sound effects and background music
+- [x] Add a background image
 - [ ] Add a scoring system
-- [ ] Implement multiple lives and respawning
-- [ ] Add an explosion effect for the asteroids
-- [ ] Add acceleration to the player movement
 - [ ] Make the objects wrap around the screen instead of disappearing
-- [ ] Add a background image
-- [ ] Create different weapon types
-- [ ] Make the asteroids lumpy instead of perfectly round
+- [ ] Implement multiple lives and respawning
+- [ ] Add acceleration to the player movement
+- [ ] Add an explosion effect for the asteroids
 - [ ] Make the ship have a triangular hit box instead of a circular one
 - [ ] Add a shield power-up
 - [ ] Add a speed power-up
+- [ ] Add a game over screen
+- [ ] Add a beginning screen
+- [ ] Make the asteroids lumpy instead of perfectly round
+- [ ] Create different weapon types
 - [ ] Add bombs that can be dropped
+- [ ] Implement power-ups and special abilities
+- [ ] Add sound effects and background music
+- [ ] Add different enemy types
+- [ ] Create a high-score system
+- [ ] Design additional levels with increasing difficulty
+- [ ] Develop multiplayer functionality
 
 ## 🔧 Implemented Features
 

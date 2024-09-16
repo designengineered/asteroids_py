@@ -1,10 +1,17 @@
 import sys
 import pygame
+import pygame.image
 from asteroidfield import *
 from asteroid import *
 from constants import *
 from player import *
 from shots import Shot
+
+
+def set_background_opacity(screen, background_image, opacity):
+    screen.fill("black")
+    background_image.set_alpha(opacity * 255)
+    screen.blit(background_image, (0, 0))
 
 
 def main():
@@ -13,6 +20,10 @@ def main():
     pygame.init()
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    background_image = pygame.image.load(
+        'assets/background.png').convert_alpha()
+
+    opacity = 0.5
 
     # FPS Assignment
     clock = pygame.time.Clock()
@@ -26,7 +37,6 @@ def main():
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = (updatable)
     asteroid_field = AsteroidField()
-
     Player.containers = (updatable, drawable)
     player = Player((SCREEN_WIDTH)/2, (SCREEN_HEIGHT)/2)
 
@@ -38,16 +48,24 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_UP:
+                    opacity = min(1.0, opacity + 0.1)
+                elif event.key == pygame.K_DOWN:
+                    opacity = max(0.0, opacity - 0.1)
+
         for obj in updatable:
             obj.update(dt)
-        screen.fill("black")
+
+        set_background_opacity(screen, background_image, opacity)
+
         for asteroid in asteroids:
-            if asteroid.collision(player) == True:
+            if asteroid.collision(player) is True:
                 print("Game over!")
                 sys.exit()
 
             for shot in shots:
-                if asteroid.collision(shot) == True:
+                if asteroid.collision(shot) is True:
                     shot.kill()
                     asteroid.split()
 
