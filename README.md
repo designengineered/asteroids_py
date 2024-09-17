@@ -22,6 +22,18 @@ Project by Cello ([@laztaxon](https://github.com/laztaxon)) as part of an Object
 
 Shoot asteroids to split them into smaller pieces. Be careful not to collide with them!
 
+## 💯 Scoring System
+
+The game now includes a scoring system to track your progress and challenge you to achieve higher scores. Here's how it works:
+
+- **Small Asteroids**: Destroying the smallest asteroids awards 50 points each.
+- **Medium Asteroids**: Taking out medium-sized asteroids gives you 35 points per asteroid.
+- **Large Asteroids**: The largest asteroids are worth 25 points each when destroyed.
+
+Your current score is displayed in the top-left corner of the screen during gameplay. When the game ends, your final score is shown on the game over screen.
+
+Try to maximize your score by strategically targeting asteroids and staying alive as long as possible!
+
 ## 🛠️ Setup and Installation
 
 1. Ensure you have Python 3.10 or later installed on your system. 🐍
@@ -133,14 +145,3 @@ If you encounter any issues running the game, try the following:
 
 - **Scoring System**: Added a scoring system that rewards players for destroying asteroids. The score is displayed during gameplay and shown on the game over screen.
 
-## 💯 Scoring System
-
-The game now includes a scoring system to track your progress and challenge you to achieve higher scores. Here's how it works:
-
-- **Small Asteroids**: Destroying the smallest asteroids awards 50 points each.
-- **Medium Asteroids**: Taking out medium-sized asteroids gives you 35 points per asteroid.
-- **Large Asteroids**: The largest asteroids are worth 25 points each when destroyed.
-
-Your current score is displayed in the top-left corner of the screen during gameplay. When the game ends, your final score is shown on the game over screen.
-
-Try to maximize your score by strategically targeting asteroids and staying alive as long as possible!

@@ -32,7 +32,7 @@ def main():
     background_image = pygame.image.load(
         'assets/background.png').convert_alpha()
 
-    opacity = 0.35  # Set initial opacity to 65%
+    opacity = 0.3
 
     # FPS Assignment
     clock = pygame.time.Clock()
