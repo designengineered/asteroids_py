@@ -7,15 +7,19 @@ from constants import *
 from game_state import GameState
 import game_state
 from player import *
+from scoring import Scoring
 from shots import Shot
 
 
 def set_background_opacity(screen, background_image, opacity):
     # Scale the background image to fill the screen
-    scaled_background = pygame.transform.scale(background_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
-    temp_surface = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.SRCALPHA)
+    scaled_background = pygame.transform.scale(
+        background_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
+    temp_surface = pygame.Surface(
+        (SCREEN_WIDTH, SCREEN_HEIGHT), pygame.SRCALPHA)
     temp_surface.fill((255, 255, 255, int(opacity * 255)))
-    scaled_background.blit(temp_surface, (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
+    scaled_background.blit(temp_surface, (0, 0),
+                           special_flags=pygame.BLEND_RGBA_MULT)
     screen.blit(scaled_background, (0, 0))
 
 
@@ -47,6 +51,8 @@ def main():
 
     Shot.containers = (shots, updatable, drawable)
 
+    scoring = Scoring()
+
     dt = 0
     game_state = GameState.MENU
     font = pygame.font.Font(None, 36)
@@ -63,6 +69,7 @@ def main():
             shot.kill()
         shots.empty()
         asteroid_field.reset()
+        scoring.reset()
 
     while True:
         for event in pygame.event.get():
@@ -85,7 +92,8 @@ def main():
                     elif game_state == GameState.GAME_OVER:
                         game_state = GameState.MENU
 
-        screen.fill((0, 0, 0))  # Clear the screen before drawing the background
+        # Clear the screen before drawing the background
+        screen.fill((0, 0, 0))
         set_background_opacity(screen, background_image, opacity)
 
         if game_state == GameState.PLAYING:
@@ -100,10 +108,13 @@ def main():
                 for shot in shots:
                     if asteroid.collision(shot) is True:
                         shot.kill()
+                        scoring.add_score(asteroid.radius)
                         asteroid.split()
 
             for obj in drawable:
                 obj.draw(screen)
+
+            scoring.draw(screen)
 
         elif game_state == GameState.MENU:
             title_text = title_font.render("ASTEROIDS", True, (255, 215, 0))
@@ -124,8 +135,15 @@ def main():
         elif game_state == GameState.GAME_OVER:
             game_over_text = title_font.render(
                 "GAME OVER", True, (255, 255, 255))
+            final_score_text = font.render(
+                f"Final Score: {scoring.get_score()}", True, (255, 255, 255))
+            restart_text = font.render(
+                "Press ENTER to return to menu", True, (255, 255, 255))
+
             screen.blit(game_over_text, (screen.get_width()/2 -
-                        game_over_text.get_width()/2, screen.get_height()/2 - 50))
+                        game_over_text.get_width()/2, screen.get_height()/2 - 100))
+            screen.blit(final_score_text, (screen.get_width()/2 -
+                        final_score_text.get_width()/2, screen.get_height()/2))
 
             blink_time += dt
             if blink_time >= 0.5:
@@ -133,10 +151,8 @@ def main():
                 blink_time = 0
 
             if show_text:
-                restart_text = font.render(
-                    "Press ENTER to return to menu", True, (255, 255, 255))
-                screen.blit(restart_text, (screen.get_width()/2 -
-                                           restart_text.get_width()/2, screen.get_height()/2 + 50))
+                screen.blit(restart_text, (screen.get_width(
+                )/2 - restart_text.get_width()/2, screen.get_height()/2 + 100))
 
         pygame.display.flip()
         dt = clock.tick(60) / 1000

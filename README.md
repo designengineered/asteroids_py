@@ -105,7 +105,7 @@ If you encounter any issues running the game, try the following:
 - [x] Implement setup scripts & global command
 - [x] Add a background image
 - [x] Add game states (menu, playing, game over screens)
-- [ ] Add a scoring system
+- [x] Add a scoring system
 - [ ] Make the objects wrap around the screen instead of disappearing
 - [ ] Implement multiple lives and respawning
 - [ ] Add acceleration to the player movement
@@ -130,3 +130,17 @@ If you encounter any issues running the game, try the following:
 - **Background Image with Adjustable Opacity**: Added a space-themed background image with adjustable opacity. Players can increase or decrease the background opacity using the Up and Down arrow keys.
 
 - **Game States**: Implemented different game states including a start menu, active gameplay, and a game over screen. This provides a more complete game loop and user experience.
+
+- **Scoring System**: Added a scoring system that rewards players for destroying asteroids. The score is displayed during gameplay and shown on the game over screen.
+
+## 💯 Scoring System
+
+The game now includes a scoring system to track your progress and challenge you to achieve higher scores. Here's how it works:
+
+- **Small Asteroids**: Destroying the smallest asteroids awards 50 points each.
+- **Medium Asteroids**: Taking out medium-sized asteroids gives you 35 points per asteroid.
+- **Large Asteroids**: The largest asteroids are worth 25 points each when destroyed.
+
+Your current score is displayed in the top-left corner of the screen during gameplay. When the game ends, your final score is shown on the game over screen.
+
+Try to maximize your score by strategically targeting asteroids and staying alive as long as possible!
