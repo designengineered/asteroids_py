@@ -24,3 +24,7 @@ class CircleShape(pygame.sprite.Sprite):
         if distance <= (r1 + r2):
             return True
         return False
+
+    def reset(self, x, y):
+        self.position = pygame.Vector2(x, y)
+        self.velocity = pygame.Vector2(0, 0)

@@ -10,6 +10,10 @@ class Player(CircleShape):
         self.rotation = 0
         self.cooldown_timer = 0
 
+    def reset(self, x, y):
+        super().reset(x, y)
+        self.rotation = 0
+
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
         right = pygame.Vector2(0, 1).rotate(

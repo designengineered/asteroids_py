@@ -15,6 +15,10 @@ Project by Cello ([@laztaxon](https://github.com/laztaxon)) as part of an Object
 - **A**: Rotate left
 - **D**: Rotate right
 - **Spacebar**: Shoot
+- **Up Arrow**: Increase background opacity
+- **Down Arrow**: Decrease background opacity
+- **Escape**: Return to menu (during gameplay) or exit game (from menu)
+- **Enter**: Start game (from menu) or return to menu (from game over screen)
 
 Shoot asteroids to split them into smaller pieces. Be careful not to collide with them!
 
@@ -57,6 +61,8 @@ After running the setup script, you can start your space adventure from anywhere
 
 You may need to restart your terminal or command prompt for the changes to take effect.
 
+When you start the game, you'll be presented with a menu screen. Press Enter to start the game. If you lose, you'll see a game over screen, from which you can return to the menu.
+
 ## 🔄 Updating the Game
 
 To update the game to the latest version:
@@ -98,6 +104,7 @@ If you encounter any issues running the game, try the following:
 
 - [x] Implement setup scripts & global command
 - [x] Add a background image
+- [x] Add game states (menu, playing, game over screens)
 - [ ] Add a scoring system
 - [ ] Make the objects wrap around the screen instead of disappearing
 - [ ] Implement multiple lives and respawning
@@ -121,3 +128,7 @@ If you encounter any issues running the game, try the following:
 ## 🔧 Implemented Features
 
 - **Setup Scripts & Global Command**: Implemented setup scripts for Windows (.bat) and macOS/Linux (.sh) to create a virtual environment, install required packages, and set up the game to run globally. Users can now start the game from anywhere using simple commands.
+
+- **Background Image with Adjustable Opacity**: Added a space-themed background image with adjustable opacity. Players can increase or decrease the background opacity using the Up and Down arrow keys.
+
+- **Game States**: Implemented different game states including a start menu, active gameplay, and a game over screen. This provides a more complete game loop and user experience.
