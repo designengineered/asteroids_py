@@ -113,8 +113,6 @@ If you encounter any issues running the game, try the following:
 - [ ] Make the ship have a triangular hit box instead of a circular one
 - [ ] Add a shield power-up
 - [ ] Add a speed power-up
-- [ ] Add a game over screen
-- [ ] Add a beginning screen
 - [ ] Make the asteroids lumpy instead of perfectly round
 - [ ] Create different weapon types
 - [ ] Add bombs that can be dropped
