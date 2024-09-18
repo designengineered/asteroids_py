@@ -48,7 +48,7 @@ Try to maximize your score by strategically targeting asteroids and staying aliv
 3. Run the setup script:
    - On Windows:
      ```
-     setup.bat
+     .\setup.bat
      ```
    - On macOS and Linux:
      ```
@@ -64,7 +64,7 @@ After running the setup script, you can start your space adventure from anywhere
 
 - On Windows:
   ```
-  run_asteroids.bat
+  .\run_asteroids.bat
   ```
 - On macOS and Linux:
   ```
