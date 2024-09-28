@@ -2,7 +2,7 @@
 
 A classic Asteroids-style game implemented in Python using Pygame, showcasing Object-Oriented Programming principles! 🎮
 
-Project by Cello ([@laztaxon](https://github.com/designengineered)) as part of an Object Oriented Programming course.
+Project by Cello ([@designEngineered](https://github.com/designengineered)) as part of an Object Oriented Programming course.
 
 **Note: This is version 1.0 of the game. Visuals and mechanics may change in future updates.**
 
