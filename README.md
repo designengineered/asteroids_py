@@ -41,7 +41,7 @@ Try to maximize your score by strategically targeting asteroids and staying aliv
 
 2. Clone this repository:
    ```
-   git clone https://github.com/laztaxon/asteroids_py.git
+   git clone https://github.com/designengineered/asteroids_py.git
    cd asteroids_py
    ```
 
